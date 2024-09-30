@@ -1,15 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Todoscontroller;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Todoscontroller::class, 'welcome']);
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('about', [Todoscontroller::class, 'about']);
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('contact', [Todoscontroller::class, 'contact']);
